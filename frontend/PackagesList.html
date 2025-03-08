@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head lang="en-US">
+    <title>Packages</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="PackagesListDesign.css">
+</head>
+
+<body>
+    <header>
+        <h1><a href="http://127.0.0.1:5500/frontend/LandingPageV2.html" target="_self">Globe Quest</a></h1>
+        <p><i class='bx bxs-user'></i></p>
+    </header>
+
+    <div class="container" id="packagesContainer">
+        <!-- Loading message will be replaced by packages -->
+        <div class="loading">Loading packages...</div>
+    </div>
+
+    <script>
+        async function loadPackages() {
+            const container = document.getElementById('packagesContainer');
+            
+            try {
+                const response = await fetch('http://localhost:8000/packages');  // Updated URL
+                const packages = await response.json();
+                
+                // Clear the loading message
+                container.innerHTML = '';
+                
+                if (packages.length === 0) {
+                    container.innerHTML = '<div class="error">No packages available at the moment.</div>';
+                    return;
+                }
+
+                packages.forEach(package => {
+                    const packageHTML = `
+                        <div class="package">
+                            <div class="picture">
+                                <img src="${package.imgname || 'landogback.jpg'}" alt="${package.title}">
+                            </div>
+                            <div class="packageinfo">
+                                <h3 class="packname">${package.title}</h3>
+                                <div class="info">
+                                    <div class="days">
+                                        <h4 class="title">Days</h4>
+                                        <p class="description">${package.nodays}</p>
+                                    </div>
+                                    <div class="days">
+                                        <h4 class="title">Country</h4>
+                                        <p class="description">${package.country}</p>
+                                    </div>
+                                </div>
+                                <div class="about">
+                                    <hr>
+                                    <p>${package.description}</p>
+                                </div>
+                            </div>
+                            <div class="packageprice">
+                                <div class="price">
+                                    <h4 class="starts">Starts from</h4>
+                                    <p class="cost">$${package.price.toLocaleString()}</p>
+                                </div>
+                                <div class="buttons">
+                                    <p class="view"><a href="#">View tour details</a></p>
+                                    <div class="extra">
+                                        <p><a href="#"><i class='bx bx-git-compare'></i> Compare</a></p>
+                                        <p><a href="#"><i class='bx bxs-heart'></i> Wishlist</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    container.innerHTML += packageHTML;
+                });
+            } catch (error) {
+                console.error('Error loading packages:', error);
+                container.innerHTML = '<div class="error">Failed to load packages. Please try again later.</div>';
+            }
+        }
+
+        // Load packages when the page loads
+        document.addEventListener('DOMContentLoaded', loadPackages);
+    </script>
+</body>
+</html>

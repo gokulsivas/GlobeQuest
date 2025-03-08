@@ -1,0 +1,5 @@
+Mirror in progress since Thu, 07 Nov 2024 19:30:08 .. please wait!
+"C://Program Files//WinHTTrack//httrack.exe" https://www.veenaworld.com/world -O veenaworld_site +*.veenaworld.com/* -%v 
+To pause the engine: create an empty file named 'hts-stop.lock'
+PID=7020
+START=1730988008

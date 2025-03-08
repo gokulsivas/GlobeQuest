@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: rgb(27, 38, 49);
+}
+
+.navbar {
+    background-color: black;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar h1 a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    left: 50px;
+    bottom: 2px;
+    padding: 10px;
+    border: none;
+}
+
+.navbar h1 a:hover {
+    color: orange;
+}
+
+.buttons {
+    position: relative;
+    right: 80px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: none;
+}
+
+.navbar ul li {
+    padding: 6px;
+    list-style: none;
+}
+
+.navbar ul li button {
+    padding: 8px 12px;
+    border-radius: 25px;
+    background-color: orange;
+    color: white;
+}
+
+.navbar ul li button:hover {
+    background: transparent;
+    scale: 1.05;
+    box-shadow: none;
+    border: solid 2px white;
+}
+
+.navbar ul li button:active {
+    scale: 0.95;
+    color: orange;
+    border: none;
+    background-color: white;
+}
+
+
+.content {
+    border: none;
+    width: 80vw;
+    position: relative;
+    top: 60px;
+    left: 120px;
+}
+
+.content h2 {
+    width: 100%;
+    font-size: 80px;
+    color: orange;
+    padding-bottom: 30px;
+}
+
+.content p {
+    width: 80%;
+    font-size: 30px;
+    color: white;
+    line-height: 1.2;
+}
+
+.content ul {
+    font-size: 30px;
+    color: white;
+    width: 80%;
+}
+
+.content ul li {
+    padding-bottom: 15px;
+    list-style: none;
+}
+
+#about {
+    display: block;
+}
+
+#mission, #choose, #features, #join, #touch, #start {
+    display: none;
+}

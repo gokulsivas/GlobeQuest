@@ -1,0 +1,67 @@
+{
+  "name": "Veena World",
+  "short_name": "Veena World",
+  "description": "Veena World is one of the top travel agencies in Mumbai, India offering budget travel package. Book best holiday tour packages and enjoy best holiday deals at affordable price!",
+  "dir": "ltr",
+  "lang": "en-IN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "minimal-ui",
+  "orientation": "portrait-primary",
+  "background_color": "#fff",
+  "theme_color": "#FFD500",
+  "icons": [
+    {
+      "src": "/assets/icons/app-icon-48x48.png",
+      "type": "image/png",
+      "sizes": "48x48",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/assets/icons/app-icon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/assets/icons/app-icon-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/assets/icons/app-icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/assets/icons/app-icon-256x256.png",
+      "type": "image/png",
+      "sizes": "256x256",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/assets/icons/app-icon-384x384.png",
+      "type": "image/png",
+      "sizes": "384x384",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/assets/icons/app-icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable any"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.veenaworld.app&hl=en"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/in/app/veena-world/id1460386002"
+    }
+  ]
+}

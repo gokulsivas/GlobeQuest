@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('LandingBack.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(27, 38, 49, 0.8);
+    background-blend-mode: overlay;
+}
+
+        header {
+            background-color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 60px;
+        }
+
+        header h1 a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            position: relative;
+            left: 50px;
+            bottom: 2px;
+            padding: 10px;
+            border: none;
+        }
+
+        header h1 a:hover {
+            color: orange;
+        }
+
+        header p {
+            color: white;
+            border: none;
+            position: relative;
+            right: 100px;
+            padding: 8px 16px 6px 16px;
+            border-radius: 20px;
+            background-color: orange;
+        }
+
+        header p:hover {
+            scale: 1.05;
+        }
+
+        header p:active {
+            scale: 0.95;
+        }
+
+        .container {
+            background: transparent;
+            border: none;
+            width: 80%;
+            padding-top: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .package {
+            width: 98%;
+            border: none;
+            background-color: rgba(27, 38, 49, 0.6);
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .picture {
+            border: none;
+            width: 200px; /* Set fixed width */
+            height: 200px; /* Set fixed height */
+            margin-right: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: clip; /* Ensures the image doesn't overflow the container */
+        }
+        
+        .picture img {
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: clip; /* Ensures the image covers the area without distorting */
+        }
+        
+
+        .packageinfo {
+            border: none;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 5px;
+        }
+
+        .packageinfo h3 {
+            font-size: 24px;
+            color: orange;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .packageprice {
+            border: none;
+            background-color: rgb(27, 38, 49);
+            border-radius: 10px;
+            width: 250px;
+            margin-left: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: end;
+            padding: 15px;
+        }
+
+        .packageinfo .info {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            border: none;
+            margin-bottom: 5px;
+        }
+
+        .info .days {
+            border: none;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            padding: 2px 5px;
+            margin-right: 40px;
+            border-radius: 10px;
+        }
+
+        .days h4 {
+            font-size: 12px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .days p {
+            font-size: 14px;
+            color: white;
+        }
+
+        .about hr {
+            height: 2px;
+            border: none;
+            background-color: white;
+            margin-bottom: 8px;
+        }
+
+        .about p {
+            font-size: 14px;
+            color: white;
+        }
+
+        .price .starts {
+            color: white;
+        }
+
+        .price .cost {
+            color: white;
+            text-align: right;
+        }
+
+        .buttons {
+            border: none;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 5px;
+        }
+
+        .buttons .view a {
+            border: none;
+            text-decoration: none;
+            padding: 5px 30px;
+            color: white;
+            background-color: orange;
+            position: relative;
+            top: 5px;
+            font-size: 15px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+
+        .buttons .view a:hover {
+            border: solid 2px white;
+            background: transparent;
+        }
+
+        .buttons .extra {
+            border: none;
+            width: 187px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .buttons .extra p a {
+            border: solid 2px black;
+            position: relative;
+            top: 17px;
+            text-decoration: none;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 15px;
+            color: black;
+            background-color: white;
+            display: inline-block;
+        }
+
+        .buttons .extra p a:hover {
+            color: white;
+            background-color: #ababab;
+        }
+
+        .loading {
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .error {
+            color: #ff6b6b;
+            font-size: 16px;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            margin: 20px;
+        }
